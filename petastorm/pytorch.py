@@ -198,7 +198,8 @@ class DataLoader(LoaderBase):
             keys = row_as_dict.keys()
 
             # Promote some types that are incompatible with pytorch to be pytorch friendly.
-            _sanitize_pytorch_types(row_as_dict)
+            # Allows for more flexbility
+            #_sanitize_pytorch_types(row_as_dict)
 
             # Add rows to shuffling buffer
             if not self.reader.batched_output:
